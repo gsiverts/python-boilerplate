@@ -13,7 +13,7 @@ RUN /usr/games/cowsay "Install dependencies in this script. This happens on the 
 
 # pip install python deps from requirements.txt
 # For caching until requirements.txt changes
-ADD ./requirements.txt /requirements.txt
+COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
 COPY . /usr/src/app
